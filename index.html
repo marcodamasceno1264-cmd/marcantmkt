@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mapa do Produtor | Posicionamento e Vendas</title>
+    <meta name="description"
+        content="Transforme seu proximo evento presencial em posicionamento e vendas com a engenharia VETOR usada em eventos de ate 20 mil pessoas.">
+
+    <meta property="og:title" content="O Mapa do Produtor | Posicionamento e Vendas">
+    <meta property="og:description"
+        content="Transforme seu proximo evento presencial em posicionamento e vendas com a engenharia VETOR usada em eventos de ate 20 mil pessoas.">
+    <meta property="og:image" content="https://placehold.co/1200x630/09090b/ffffff?text=OG+Image+O+Mapa+do+Produtor">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        background: '#09090b',
+                        foreground: '#fafafa',
+                        primary: '#4f9cf7',
+                        accent: '#a78bfa',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #09090b;
+            color: #fafafa;
+        }
+
+        .glass {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #60a5fa, #c084fc);
+        }
+
+        .bg-gradient-subtle {
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.2), transparent 40%), radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.2), transparent 40%);
+        }
+
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+
+        .accordion-content.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-button[aria-expanded="true"] .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body class="antialiased pb-24 md:pb-0 bg-black text-white relative min-h-screen">
+    <!-- Partículas animadas globais -->
+    <div id="particles-js"></div>
+
+    <header class="fixed top-0 w-full z-50 glass transition-all duration-300 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Logo O Mapa do Produtor" class="h-16 md:h-20 w-auto">
+                </div>
+                <span class="hidden lg:block text-sm text-zinc-300 font-medium border-l border-zinc-700 pl-4">Eventos
+                    presenciais que posicionam e vendem, com metodo de campo.</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#oferta"
+                    class="bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-400 hover:to-violet-400 px-6 py-2.5 rounded-full text-sm font-bold transition-all transform hover:scale-105 focus:ring-2 focus:ring-violet-400 focus:outline-none shadow-lg shadow-blue-500/25">
+                    QUERO MEU MAPA AGORA
+                </a>
+            </div>
+            <button id="mobile-menu-btn"
+                class="md:hidden text-zinc-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white rounded"
+                aria-label="Abrir menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section
+            class="relative pt-40 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden flex flex-col items-center text-center bg-transparent z-10">
+
+            <!-- Imagem estratégica de fundo no Hero -->
+            <div
+                class="absolute inset-x-0 bottom-0 h-full flex justify-center lg:justify-start z-0 pointer-events-none overflow-hidden">
+                <img src="hero-junior-desk-v3.png" alt="Junior Barbosa"
+                    class="w-[150%] md:w-[120%] lg:w-auto h-[60%] lg:h-[110%] absolute bottom-0 left-1/2 -translate-x-1/2 lg:left-0 lg:-translate-x-[25%] xl:-translate-x-[15%] opacity-30 md:opacity-40 lg:opacity-100 object-contain object-bottom"
+                    style="mask-image: linear-gradient(to top, black 55%, transparent); -webkit-mask-image: linear-gradient(to top, black 55%, transparent);">
+            </div>
+
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pointer-events-none z-0">
+            </div>
+            <div class="max-w-4xl mx-auto z-10 relative">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-zinc-800/80 border border-zinc-700 text-xs font-semibold tracking-widest text-zinc-300 uppercase mb-6">
+                    Para CEOs, influencers, heads e produtores
+                </span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.1] mb-8">
+                    Transforme seu proximo evento presencial em <span class="text-gradient">posicionamento e
+                        vendas</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-zinc-300 font-medium mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Voce nao precisa ser produtor. Voce precisa de um mapa: o que fazer antes, no dia e depois, para
+                    lotar, encantar e converter sem improviso com a engenharia VETOR.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+                    <ul class="text-left space-y-3">
+                        <li class="flex items-start gap-3 text-zinc-300">
+                            <svg class="w-6 h-6 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Planejar com meta realista, sem morrer na praia por numero ilusorio</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-zinc-300">
+                            <svg class="w-6 h-6 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Executar no campo sem erro, com logistica, equipe e ritmo do evento</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-zinc-300">
+                            <svg class="w-6 h-6 text-primary shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Fechar a conta no pos evento, com follow up, pitch e monetizacao</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex flex-col items-center">
+                    <a href="#oferta"
+                        class="w-full md:w-auto bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-400 hover:to-violet-400 px-10 py-5 rounded-full text-lg md:text-xl font-extrabold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(79,156,247,0.3)] focus:ring-4 focus:ring-violet-400/50 focus:outline-none">
+                        QUERO O MAPA DO PRODUTOR
+                    </a>
+                    <div
+                        class="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs md:text-sm text-zinc-300 font-medium">
+                        <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg> Entrega imediata</span>
+                        <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg> Acesso vitalicio</span>
+                        <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg> Garantia de 30 dias</span>
+                        <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z">
+                                </path>
+                            </svg> Pagamento seguro Kiwify</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full max-w-7xl mx-auto mt-24 border-t border-zinc-800 pt-10">
+                <p class="text-xs uppercase tracking-widest text-zinc-300 mb-6 font-bold">Engenharia testada e validada
+                    em:</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <div class="glass px-5 py-3 rounded-full text-sm font-medium text-zinc-300 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span> Convencoes para mais de 20.000 pessoas
+                    </div>
+                    <div class="glass px-5 py-3 rounded-full text-sm font-medium text-zinc-300 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span> Exposicoes para 15.000 pessoas
+                    </div>
+                    <div class="glass px-5 py-3 rounded-full text-sm font-medium text-zinc-300 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span> Projetos com ONU, UNESCO e Banco Mundial
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dor" class="py-24 px-6 bg-transparent border-y border-zinc-900/50 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-zinc-100 tracking-tight">O problema nao e fazer
+                    evento. <br><span class="text-red-400">E fazer evento que nao paga o proprio custo.</span></h2>
+                <div class="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-8 md:p-12 text-left mb-8 shadow-2xl">
+                    <p class="text-lg text-zinc-300 mb-6">Voce ja viu isso acontecer, ou tem medo de acontecer.</p>
+                    <ul class="space-y-4 text-zinc-300 text-lg">
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg> O evento ate fica bonito, mas nao vende.</li>
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg> A logistica vira incendio e voce perde o controle do palco.</li>
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg> A meta e grande demais e o evento nasce morto.</li>
+                        <li class="flex items-start gap-3"><svg class="w-6 h-6 text-red-500 shrink-0 mt-0.5" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg> No pos evento, ninguem liga para ninguem e o dinheiro fica na mesa.</li>
+                    </ul>
+                </div>
+                <p class="text-xl md:text-2xl font-semibold text-zinc-200">
+                    Evento sem engenharia vira custo, estresse e vaidade. <br>
+                    <span class="text-primary">Evento com metodo vira autoridade, audiencia quente e receita.</span>
+                </p>
+            </div>
+        </section>
+        <section id="mecanismo" class="py-24 px-6 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">A diferenca entre evento que acontece
+                        e evento que vende e um <span class="text-gradient">metodo de campo</span>.</h2>
+                    <p class="text-xl text-zinc-300 max-w-3xl mx-auto">O VETOR e a engenharia por tras de eventos que
+                        dao certo porque foram desenhados para dar certo.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <div class="glass p-8 rounded-3xl hover:border-primary/50 transition-colors">
+                        <div class="text-5xl font-black text-white/10 mb-4 absolute top-4 right-6 pointer-events-none">V
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Viabilidade Realista</h3>
+                        <p class="text-zinc-300 relative z-10">Meta, publico e orcamento que fecham a conta. Sem
+                            fantasia.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl hover:border-primary/50 transition-colors">
+                        <div class="text-5xl font-black text-white/10 mb-4 absolute top-4 right-6 pointer-events-none">E
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Execucao de Campo</h3>
+                        <p class="text-zinc-300 relative z-10">Montagem, equipe, backstage, ritmo e produtividade no
+                            mundo real.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl hover:border-primary/50 transition-colors">
+                        <div class="text-5xl font-black text-white/10 mb-4 absolute top-4 right-6 pointer-events-none">T
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Tecnologia Aplicavel</h3>
+                        <p class="text-zinc-300 relative z-10">Ferramentas simples, planilhas, apps e checklists que
+                            cabem na palma da mao.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl hover:border-primary/50 transition-colors lg:col-span-2">
+                        <div class="text-5xl font-black text-white/10 mb-4 absolute top-4 right-6 pointer-events-none">O
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Organizacao de Logistica</h3>
+                        <p class="text-zinc-300 relative z-10">Fluxo de pessoas, cronogramas, contratos e documentacao.
+                            A espinha dorsal do evento.</p>
+                    </div>
+                    <div class="glass p-8 rounded-3xl hover:border-primary/50 transition-colors">
+                        <div class="text-5xl font-black text-white/10 mb-4 absolute top-4 right-6 pointer-events-none">R
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3 relative z-10">Rigor de Cronograma</h3>
+                        <p class="text-zinc-300 relative z-10">Sem prazo nao existe evento. Sem rigor nao existe lucro.
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 rounded-2xl p-8 text-center max-w-4xl mx-auto shadow-lg">
+                    <p class="text-2xl font-bold text-white">Voce para de depender de sorte e comeca a operar evento
+                        como projeto com resultado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publico" class="py-24 px-6 bg-transparent border-y border-zinc-800/50 relative z-10">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 md:p-12 shadow-xl">
+                    <h2 class="text-3xl font-bold mb-8 text-white flex items-center gap-3">
+                        <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Para quem e
+                    </h2>
+                    <p class="text-zinc-300 mb-6 font-medium">Para quem ocupa posicao de decisao e quer usar evento
+                        presencial como alavanca de valor e vendas</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-zinc-300"><span
+                                class="text-green-500 font-bold mt-1">&#10003;</span> CEOs, founders e socios</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span
+                                class="text-green-500 font-bold mt-1">&#10003;</span> Influencers e criadores que querem
+                            monetizar no presencial</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span
+                                class="text-green-500 font-bold mt-1">&#10003;</span> Heads de marketing, vendas, growth
+                            e tecnologia</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span
+                                class="text-green-500 font-bold mt-1">&#10003;</span> Produtores, lideres de equipe,
+                            gestores de projetos e operacoes</li>
+                    </ul>
+                </div>
+                <div class="bg-zinc-950 border border-zinc-800 rounded-3xl p-8 md:p-12 shadow-xl">
+                    <h2 class="text-3xl font-bold mb-8 text-zinc-400 flex items-center gap-3">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Para quem nao e
+                    </h2>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-zinc-400"><span
+                                class="text-red-500 font-bold mt-1">&#10005;</span> Quem quer um eventinho para postar
+                            foto e inflar ego</li>
+                        <li class="flex items-start gap-3 text-zinc-400"><span
+                                class="text-red-500 font-bold mt-1">&#10005;</span> Quem e amador e acha que improviso e
+                            estrategia</li>
+                        <li class="flex items-start gap-3 text-zinc-400"><span
+                                class="text-red-500 font-bold mt-1">&#10005;</span> Quem nao quer desenvolver senso
+                            critico, elevar percepcao de valor e aprender a capturar atencao e converter</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="autoridade" class="py-24 px-6 relative">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 relative">
+                    <div
+                        class="aspect-[4/5] w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(59,130,246,0.15)] relative">
+                        <img src="junior-barbosa.jpg"
+                            alt="Junior Barbosa - Produtor de eventos com 23 anos de experiencia"
+                            class="w-full h-full object-cover object-top" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-3">Quem te guia</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-6 text-white tracking-tight">Junior Barbosa</h3>
+                    <p class="text-xl text-zinc-300 font-medium mb-4">46 anos, 23 anos em producao de eventos.</p>
+                    <p class="text-lg text-zinc-300 mb-10 leading-relaxed">Experiencia em eventos massivos com foco em
+                        experiencia, encantamento e pitch de vendas.</p>
+                    <div class="space-y-8">
+                        <div>
+                            <p class="text-sm text-zinc-400 uppercase tracking-wider font-semibold mb-4">Projetos &amp;
+                                Nomes de Peso</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Pablo
+                                    Marcal</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Joel
+                                    Jota</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Kenia
+                                    Gama</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Catia
+                                    Damaceno</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Simone
+                                    Mendes</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Paulo
+                                    Vieira</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-primary border-primary/30">MB
+                                    Summit</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-primary border-primary/30">Tony
+                                    Robbins</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-primary border-primary/30">Roberto
+                                    Shinyashiki</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-zinc-400 uppercase tracking-wider font-semibold mb-4">Instituicoes
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">ONU</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">UNESCO</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Banco
+                                    Mundial</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Ministerios</span>
+                                <span
+                                    class="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded-full text-sm font-medium text-zinc-300">Presidencia
+                                    e Embaixadas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="entrega" class="py-24 px-6 bg-transparent border-t border-zinc-800/50 relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">O Mapa do Produtor e um <span
+                            class="text-white border-b-2 border-primary">playbook em 4 fases</span>, do zero ao pos
+                        evento que monetiza.</h2>
+                    <p class="text-xl text-primary font-medium">Aula de onboarding e 4 modulos. Total 13 aulas de 30 a
+                        50 minutos.</p>
+                </div>
+                <div class="space-y-6">
+                    <div class="glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start">
+                        <div
+                            class="w-16 h-16 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 font-black text-2xl text-zinc-400">
+                            0</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Onboarding</h3>
+                            <p class="text-zinc-300">Como usar o mapa e montar seu plano do primeiro evento</p>
+                        </div>
+                    </div>
+                    <div
+                        class="glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start border-l-4 border-l-primary/50">
+                        <div
+                            class="w-16 h-16 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 font-black text-2xl text-primary">
+                            1</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Mentalidade do Estrategista</h3>
+                            <p class="text-zinc-300 mb-2">Como pensar evento como ativo de marca e receita</p>
+                            <p class="text-zinc-400 text-sm">Tomada de decisao: o que corta, o que mantem, o que da
+                                retorno</p>
+                        </div>
+                    </div>
+                    <div
+                        class="glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start border-l-4 border-l-primary/50">
+                        <div
+                            class="w-16 h-16 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 font-black text-2xl text-primary">
+                            2</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Pre Evento</h3>
+                            <p class="text-zinc-300 mb-2">Viabilidade, orcamento, metas, cronograma, equipe, logistica e
+                                riscos</p>
+                            <p class="text-zinc-400 text-sm">O que precisa estar pronto antes de pensar em palco</p>
+                        </div>
+                    </div>
+                    <div
+                        class="glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start border-l-4 border-l-primary/50">
+                        <div
+                            class="w-16 h-16 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 font-black text-2xl text-primary">
+                            3</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Execucao</h3>
+                            <p class="text-zinc-300 mb-2">Campo, backstage, montagem, fluxos e controle</p>
+                            <p class="text-zinc-400 text-sm">Como manter o evento rodando sem caos, mesmo com imprevisto
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="glass p-6 md:p-8 rounded-2xl flex flex-col md:flex-row gap-6 items-start border-l-4 border-l-accent/50">
+                        <div
+                            class="w-16 h-16 bg-zinc-800 rounded-xl flex items-center justify-center shrink-0 font-black text-2xl text-accent">
+                            4</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Pos Evento</h3>
+                            <p class="text-zinc-300 mb-2">O que quase ninguem faz e por isso quase ninguem lucra</p>
+                            <p class="text-zinc-400 text-sm">Follow up, pitch e monetizacao do publico no pos</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-16 w-full aspect-video rounded-2xl overflow-hidden border border-zinc-800 relative shadow-2xl">
+                    <img src="mockup-membros.jpg" alt="Área de membros do curso O Mapa do Produtor"
+                        class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section id="bonus" class="py-24 px-6 relative">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight">Voce nao compra aulas. <span
+                            class="text-gradient">Voce compra atalhos prontos.</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform">
+                        <span
+                            class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Autorizacoes e documentacao</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Para nao travar no juridico</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Evita
+                            retrabalho legal</span>
+                    </div>
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform">
+                        <span
+                            class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Croqui de palco e planta baixa</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Para exposicoes e eventos</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Acelera
+                            montagem</span>
+                    </div>
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform">
+                        <span
+                            class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Planilha de custos e relatorio</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Financeiro para fechar a conta</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Previne
+                            prejuizo</span>
+                    </div>
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform">
+                        <span
+                            class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Checklists e minuto a minuto</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Do evento para nao esquecer nada</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Reduz erro
+                            no palco</span>
+                    </div>
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform">
+                        <span
+                            class="inline-block bg-primary/20 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Gestao de equipe e backstage</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Recepcao VIP e postura</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Eleva nivel
+                            premium</span>
+                    </div>
+                    <div
+                        class="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:-translate-y-1 transition-transform ring-1 ring-accent">
+                        <span
+                            class="inline-block bg-accent/20 text-accent text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider">Bonus
+                            Especial</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Aula revelacao e pitch de vendas</h3>
+                        <p class="text-zinc-300 text-sm mb-4">Modelos para evento vender, nao so acontecer</p>
+                        <span class="text-xs font-semibold text-green-400 bg-green-400/10 px-2 py-1 rounded">Maximiza
+                            conversao</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="timeline" class="py-24 px-6 bg-transparent border-y border-zinc-900/50 relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight">Como aplicar em 7, 14 e 30
+                    dias</h2>
+                <div class="relative border-l-2 border-zinc-800 ml-4 md:ml-0 md:pl-0 md:border-none space-y-12">
+                    <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-white">O Inicio Rapido</h3>
+                        </div>
+                        <div
+                            class="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-primary ring-4 ring-zinc-950 group-hover:scale-125 transition-transform">
+                        </div>
+                        <div class="md:hidden w-px h-full bg-zinc-800 absolute left-[-1px] top-0 -z-10"></div>
+                        <div
+                            class="md:hidden absolute left-[-9px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-zinc-950">
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <span class="text-primary font-bold text-xl block mb-2">7 dias</span>
+                            <ul class="text-zinc-300 space-y-2 text-sm md:text-base">
+                                <li>&#8226; Definir meta realista, orcamento e cronograma</li>
+                                <li>&#8226; Montar estrutura e responsabilidades</li>
+                                <li>&#8226; Checklist do pre evento pronto</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                        <div class="md:w-5/12 md:text-right md:pr-8 md:order-1 order-2">
+                            <span class="text-primary font-bold text-xl block mb-2">14 dias</span>
+                            <ul class="text-zinc-300 space-y-2 text-sm md:text-base">
+                                <li>&#8226; Logistica e documentacao alinhadas</li>
+                                <li>&#8226; Plano de equipe e backstage definido</li>
+                                <li>&#8226; Minuto a minuto desenhado</li>
+                            </ul>
+                        </div>
+                        <div
+                            class="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-primary ring-4 ring-zinc-950 group-hover:scale-125 transition-transform md:order-2">
+                        </div>
+                        <div class="hidden md:block w-5/12 pl-8 md:order-3">
+                            <h3 class="text-2xl font-bold text-white">Engenharia Fina</h3>
+                        </div>
+                    </div>
+                    <div class="relative pl-8 md:pl-0 md:flex md:items-center md:justify-between group">
+                        <div class="hidden md:block w-5/12 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-white">O Jogo do Lucro</h3>
+                        </div>
+                        <div
+                            class="absolute left-[-9px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-accent ring-4 ring-zinc-950 group-hover:scale-125 transition-transform">
+                        </div>
+                        <div class="md:w-5/12 md:pl-8">
+                            <span class="text-accent font-bold text-xl block mb-2">30 dias</span>
+                            <ul class="text-zinc-300 space-y-2 text-sm md:text-base">
+                                <li>&#8226; Execucao com controle no campo</li>
+                                <li>&#8226; Follow up e pitch organizados</li>
+                                <li>&#8226; Pos evento rodando para monetizar o publico</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-zinc-800 -z-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prova" class="py-24 px-6 bg-transparent relative z-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Bastidores reais. Sem foto produzida.
+                    </h2>
+                    <p class="text-xl text-zinc-300">Porque evento acontece no mundo real.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 mb-12">
+                    <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-900">
+                        <img src="bastidores-new-1.jpg" alt="Visão do público do evento" loading="lazy"
+                            class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium text-sm">Fluxo de entrada: onde a maioria dos eventos trava
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-900">
+                        <img src="bastidores-new-2.jpg" alt="Palestra do evento" loading="lazy"
+                            class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium text-sm">Backstage organizado: palco sem atraso</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-900">
+                        <img src="bastidores-new-3.jpg" alt="Controle de produção" loading="lazy"
+                            class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium text-sm">Minuto a minuto: o que impede caos</p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-900">
+                        <img src="bastidores-new-4.jpg" alt="Produção técnica" loading="lazy"
+                            class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium text-sm">Logistica bem desenhada: experiencia sem friccao
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group relative rounded-2xl overflow-hidden aspect-square bg-zinc-900">
+                        <img src="bastidores-5.png" alt="Equipe de bastidores" loading="lazy"
+                            class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                            <p class="text-white font-medium text-sm">Equipe alinhada: evento roda liso</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-2xl overflow-hidden aspect-square glass flex flex-col items-center justify-center p-8 text-center border-dashed border-2 border-zinc-700">
+                        <svg class="w-10 h-10 text-zinc-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <p class="text-zinc-300 font-medium text-sm mb-4">Mais imagens e bastidores em:</p>
+                        <a href="https://instagram.com/juniorbarbosaprodutor" target="_blank" rel="noopener noreferrer"
+                            class="text-primary font-bold hover:underline">@juniorbarbosaprodutor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Depoimento em Vídeo -->
+        <section id="depoimento-video" class="py-24 px-6 bg-transparent relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white tracking-tight">Quem participa, <span
+                            class="text-gradient">recomenda.</span></h2>
+                    <p class="text-xl text-zinc-300">Veja o depoimento de quem já viveu a experiência.</p>
+                </div>
+                <a href="https://youtu.be/FqtD7EnpSeA" target="_blank" rel="noopener noreferrer"
+                    class="group relative w-full aspect-video rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 block cursor-pointer">
+                    <!-- Thumbnail do vídeo -->
+                    <img src="https://img.youtube.com/vi/FqtD7EnpSeA/maxresdefault.jpg"
+                        alt="Depoimento de cliente - Clique para assistir"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <!-- Overlay escuro -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40 group-hover:from-black/50 group-hover:via-transparent group-hover:to-black/20 transition-all duration-500">
+                    </div>
+                    <!-- Botão de Play animado -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div
+                            class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-r from-blue-500 to-violet-500 rounded-full flex items-center justify-center shadow-[0_0_60px_rgba(79,156,247,0.4)] group-hover:shadow-[0_0_80px_rgba(79,156,247,0.6)] group-hover:scale-110 transition-all duration-300">
+                            <svg class="w-8 h-8 md:w-10 md:h-10 text-white ml-1" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- Texto sobreposto -->
+                    <div class="absolute bottom-0 left-0 right-0 p-6 text-left">
+                        <p class="text-white font-bold text-lg md:text-xl mb-1">▶ Assista o depoimento completo</p>
+                        <p class="text-zinc-300 text-sm">Clique para assistir no YouTube</p>
+                    </div>
+                </a>
+                <div class="text-center mt-10">
+                    <a href="#oferta"
+                        class="inline-block bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-400 hover:to-violet-400 px-10 py-5 rounded-full text-lg font-extrabold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(79,156,247,0.3)] focus:ring-4 focus:ring-violet-400/50 focus:outline-none">
+                        QUERO O MAPA DO PRODUTOR
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparacao" class="py-24 px-6 border-y border-zinc-900/50 bg-transparent relative z-10">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center tracking-tight text-white">Evento
+                    improvisado <span class="text-zinc-400 font-normal italic">versus</span> evento com metodo</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr>
+                                <th class="p-6 text-lg font-semibold text-zinc-400 border-b border-zinc-800 w-1/3">
+                                    Fundamento</th>
+                                <th
+                                    class="p-6 text-lg font-semibold text-red-400 border-b border-zinc-800 w-1/3 bg-red-950/10">
+                                    Improvisado</th>
+                                <th
+                                    class="p-6 text-lg font-bold text-primary border-b border-zinc-800 w-1/3 bg-primary/5 rounded-t-xl">
+                                    Com Metodo VETOR</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-zinc-300">
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Meta e orcamento</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10">Chute</td>
+                                <td class="p-6 font-semibold text-white bg-primary/5">Viabilidade realista</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Cronograma</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10">Correria</td>
+                                <td class="p-6 font-semibold text-white bg-primary/5">Rigor e controle</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Equipe</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10">Apaga incendio</td>
+                                <td class="p-6 font-semibold text-white bg-primary/5">Execucao de campo</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Logistica</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10">Fila e friccao</td>
+                                <td class="p-6 font-semibold text-white bg-primary/5">Fluxo desenhado</td>
+                            </tr>
+                            <tr class="border-b border-zinc-800/50 hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Tecnologia</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10">Ferramenta demais</td>
+                                <td class="p-6 font-semibold text-white bg-primary/5">Aplicavel e simples</td>
+                            </tr>
+                            <tr class="hover:bg-zinc-900/50 transition-colors">
+                                <td class="p-6 font-medium">Pos evento</td>
+                                <td class="p-6 text-zinc-300 bg-red-950/10 rounded-b-xl">Esquecido</td>
+                                <td
+                                    class="p-6 font-semibold text-white bg-primary/5 rounded-b-xl border-b-2 border-primary">
+                                    Follow up e monetizacao</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="oferta" class="py-24 px-6 bg-transparent relative overflow-hidden z-10">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px] pointer-events-none">
+            </div>
+            <div class="max-w-5xl mx-auto flex flex-col lg:flex-row gap-12 items-center relative z-10">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight text-white leading-tight">
+                        Entre agora e opere seu proximo evento <span class="text-gradient">com metodo</span>.</h2>
+                    <p class="text-xl text-zinc-300 mb-8">Liberacao imediata de todo o material pratico e estrategico
+                        para voce aplicar hoje.</p>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div
+                        class="bg-zinc-900/80 backdrop-blur-xl border border-zinc-700 rounded-3xl p-8 md:p-10 shadow-[0_0_50px_rgba(0,0,0,0.5)] ring-1 ring-white/10 relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-[-100%] w-1/2 h-full bg-gradient-to-r from-transparent via-white/5 to-transparent skew-x-[-20deg] animate-[shine_8s_infinite]">
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">O Mapa do Produtor</h3>
+                        <p class="text-zinc-300 text-sm mb-6 border-b border-zinc-800 pb-6">Acesso completo a engenharia
+                            VETOR</p>
+                        <div class="mb-8">
+                            <p class="text-sm text-zinc-300 mb-1">Por apenas</p>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-bold text-zinc-300">12x</span>
+                                <span class="text-5xl font-black text-white">R$ 15,50</span>
+                            </div>
+                            <p class="text-sm text-zinc-400 mt-2">ou Pix a vista: R$ 149,90</p>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-sm text-zinc-300">
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Acesso ao Mapa do Produtor</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Onboarding e 13 aulas</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Todos os bonus praticos</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Acesso vitalicio</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Suporte via WhatsApp</li>
+                            <li class="flex items-center gap-3"><svg class="w-5 h-5 text-primary shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg> Garantia de 30 dias</li>
+                        </ul>
+                        <a href="https://pay.kiwify.com.br/ML52nqy"
+                            class="block w-full text-center bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-400 hover:to-violet-400 py-4 rounded-xl text-lg font-extrabold transition-all transform hover:scale-[1.02] mb-4 focus:ring-4 focus:ring-violet-400/50 focus:outline-none shadow-lg shadow-blue-500/25">
+                            QUERO O MAPA DO PRODUTOR AGORA
+                        </a>
+                        <div class="text-center text-xs text-zinc-400 space-y-1">
+                            <p>Liberacao apos confirmacao do pagamento</p>
+                            <p>Ambiente de pagamento seguro via Kiwify</p>
+                            <p>Sem pegadinhas, voce ve o valor antes de pagar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                @keyframes shine {
+                    0% {
+                        left: -100%;
+                    }
+
+                    20% {
+                        left: 200%;
+                    }
+
+                    100% {
+                        left: 200%;
+                    }
+                }
+            </style>
+        </section>
+
+        <section id="faq" class="py-24 px-6 bg-transparent border-t border-zinc-900/50 relative z-10">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Perguntas Frequentes</h2>
+                <div class="space-y-4">
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-1">
+                            Serve para quem nunca fez evento?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-1" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Sim. O modulo de onboarding e a fase
+                                de pre evento ensinam a base do zero para voce nao cometer os erros de iniciantes.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-2">
+                            E se eu ja faco evento?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-2" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Voce vai parar de improvisar e aplicar
+                                engenharia para aumentar sua margem de lucro, controle de equipe e percepcao de valor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-3">
+                            Isso e sobre evento grande?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-3" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">O metodo VETOR escala. A mesma
+                                engenharia de campo funciona para organizar um evento de 50 pessoas ou de 20 mil
+                                pessoas.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-4">
+                            Quanto tempo para aplicar?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-4" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">O mapa sugere acoes praticas divididas
+                                em 7, 14 e 30 dias para nao sobrecarregar sua rotina.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-5">
+                            Como funciona a garantia?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-5" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Voce tem 30 dias para acessar o
+                                material. Se achar que nao serve para o seu nivel, basta solicitar o reembolso integral
+                                via plataforma.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-6">
+                            Funciona para evento pequeno e medio?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-6" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Sim. A logica de viabilidade,
+                                checklists de seguranca e logistica sao exatamente os mesmos, apenas adaptados ao seu
+                                escopo.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-7">
+                            Preciso de equipe grande?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-7" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Nao. O mapa te ensina a desenhar o
+                                fluxo para voce contratar ou usar apenas a equipe estritamente necessaria, sem inchar os
+                                custos.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-8">
+                            Preciso de ferramentas caras?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-8" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">Zero ferramentas caras. A metodologia
+                                foca em tecnologia aplicavel: planilhas eficientes e apps basicos que todo mundo ja sabe
+                                usar.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-9">
+                            Posso aplicar mesmo com pouco tempo?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-9" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">O metodo foi desenhado exatamente para
+                                economizar tempo. Voce usa nossos bonus prontos para evitar criar planilhas e
+                                cronogramas do zero.</p>
+                        </div>
+                    </div>
+                    <div class="border border-zinc-800 rounded-xl overflow-hidden bg-zinc-900/50">
+                        <button
+                            class="accordion-button w-full text-left px-6 py-5 font-semibold text-white flex justify-between items-center focus:outline-none focus:bg-zinc-800 transition-colors"
+                            aria-expanded="false" aria-controls="faq-10">
+                            Onde acesso o conteudo e por quanto tempo?
+                            <svg class="accordion-icon w-5 h-5 text-zinc-300" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="faq-10" class="accordion-content px-6 bg-zinc-900/30">
+                            <p class="pb-5 text-zinc-300 text-sm leading-relaxed">O acesso e liberado imediatamente apos
+                                a confirmacao do pagamento. Voce tera acesso vitalicio, no seu proprio ritmo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 px-6 text-center border-t border-zinc-800/50 relative bg-transparent z-10">
+            <div class="max-w-4xl mx-auto z-10 relative">
+                <h2 class="text-4xl md:text-5xl font-black mb-10 tracking-tight text-white leading-tight">
+                    Se voce quer evento presencial que posiciona e vende, voce precisa de mapa. <span
+                        class="text-red-500">Nao de improviso.</span>
+                </h2>
+                <div class="flex justify-center mb-10">
+                    <ul class="text-left space-y-3 inline-block">
+                        <li class="flex items-center gap-3 text-zinc-300 font-medium"><svg
+                                class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Metodo VETOR, engenharia de campo</li>
+                        <li class="flex items-center gap-3 text-zinc-300 font-medium"><svg
+                                class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> 13 aulas objetivas e onboarding</li>
+                        <li class="flex items-center gap-3 text-zinc-300 font-medium"><svg
+                                class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Bonus praticos: planilhas, checklists e pitch</li>
+                        <li class="flex items-center gap-3 text-zinc-300 font-medium"><svg
+                                class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg> Prova de mundo real</li>
+                    </ul>
+                </div>
+                <a href="#oferta"
+                    class="inline-block bg-gradient-to-r from-blue-500 to-violet-500 text-white hover:from-blue-400 hover:to-violet-400 px-12 py-5 rounded-full text-xl font-extrabold transition-all transform hover:scale-105 shadow-[0_0_40px_rgba(79,156,247,0.3)] focus:ring-4 focus:ring-violet-400/50 focus:outline-none">
+                    QUERO O MAPA DO PRODUTOR AGORA
+                </a>
+                <p class="mt-6 text-zinc-400 text-sm font-medium">
+                    Garantia de 30 dias | Acesso imediato apos confirmacao
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-zinc-900 bg-black py-12 px-6 text-center text-zinc-400 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-4">
+            <div class="font-bold text-lg text-zinc-300">O Mapa do Produtor</div>
+            <p>Contato: (61) 99800-6359</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition-colors focus:outline-none focus:underline">Termos de
+                    uso</a>
+                <span>|</span>
+                <a href="#" class="hover:text-white transition-colors focus:outline-none focus:underline">Politica de
+                    privacidade</a>
+            </div>
+            <p class="mt-4 text-xs opacity-75">&copy; 2024 Todos os direitos reservados. Os resultados podem variar de
+                acordo com a aplicacao pratica de cada usuario.</p>
+            <p
+                class="mt-8 text-[10px] md:text-xs font-semibold text-zinc-500 uppercase tracking-widest hover:text-white transition-colors duration-300">
+                <a href="https://instagram.com/marcantmarketing" target="_blank" rel="noopener noreferrer">
+                    DESENVOLVIDO POR MARCANT MARKETING E DEVELOPMENT
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <div
+        class="fixed bottom-0 w-full p-4 bg-zinc-950/90 backdrop-blur-md border-t border-white/10 md:hidden z-50 flex justify-center">
+        <a href="#oferta"
+            class="w-full bg-gradient-to-r from-blue-500 to-violet-500 text-white py-3 rounded-xl text-center font-bold shadow-lg shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-violet-400">
+            QUERO O MAPA AGORA
+        </a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                const content = document.getElementById(button.getAttribute('aria-controls'));
+                document.querySelectorAll('.accordion-button').forEach(btn => {
+                    btn.setAttribute('aria-expanded', 'false');
+                    document.getElementById(btn.getAttribute('aria-controls')).classList.remove('open');
+                });
+                if (!isExpanded) {
+                    button.setAttribute('aria-expanded', 'true');
+                    content.classList.add('open');
+                }
+            });
+        });
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        /* Particles Init */
+        if (typeof particlesJS !== 'undefined') {
+            particlesJS('particles-js', {
+                "particles": {
+                    "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+                    "color": { "value": "#ffffff" },
+                    "shape": { "type": "circle" },
+                    "opacity": { "value": 0.3, "random": true },
+                    "size": { "value": 3, "random": true },
+                    "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.1, "width": 1 },
+                    "move": { "enable": true, "speed": 1, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+                },
+                "interactivity": {
+                    "detect_on": "window",
+                    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
+                },
+                "retina_detect": true
+            });
+        }
+    </script>
+</body>
+
+</html>
